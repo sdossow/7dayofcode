@@ -2,78 +2,105 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>7DaysOfCode - Día 1</title>
+    <title>Día 2</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        .code-box {
-            border: 1px solid #ccc;
+        /* Estilos internos para resaltar los cuadros de código */
+        pre {
+            background-color: #f4f4f4;
+            border-left: 5px solid #007bff;
             padding: 10px;
-            background-color: #f9f9f9;
-            font-family: monospace;
-            white-space: pre-wrap;
             overflow-x: auto;
         }
     </style>
 </head>
 <body>
-    <h1>¡Llegó la hora, ! Vas a comenzar tu jornada en el #7DaysOfCode ;)</h1>
-    <p>Este primer día es muy importante. Al final de él, tendrás un nuevo conocimiento que es esencial para los próximos desafíos.</p>
-    
-    <p>Existe una situación muy común para quienes usan JavaScript: problemas con los tipos de variables al comparar los valores de dos variables entre sí. ¡A mí me ha pasado mucho!</p>
-    
-    <p>En lenguajes de programación compilados, como Java y C#, este problema se detecta en tiempo de compilación, y tienes un aviso claro del error mientras desarrollas el código.</p>
-    
-    <p>En JavaScript, estos errores pasan desapercibidos, ya que el código no pasa por un compilador. Es decir, los errores solo aparecen en tiempo de ejecución.</p>
-    
-    <p>La parte más confusa para quienes están comenzando a aprender lógica con JavaScript es la operación de igualdad entre valores. Dependiendo de cómo escribas tu código, JavaScript hará una conversión de tipo a un tipo booleano de manera implícita (automática), y esto afectará a variables que eran Strings, Numbers, Object, etc.</p>
-    
-    <p>Esto causa algunos comportamientos extraños, como todos estos ejemplos a continuación que retornan true:</p>
-    
-    <div class="code-box">
-        console.log( false == '0' );
-        console.log( null == undefined );
-        console.log( " \t\r\n" == 0 );
-        console.log( ' ' == 0 );
-    </div>
-    
-    <p>Lo cual no tiene necesariamente mucho sentido.</p>
-    
-    <p>(Puedes probar todo esto yendo a tu navegador, haciendo clic con el botón derecho, eligiendo la opción “Inspeccionar” y la pestaña “Consola”. En esa pestaña, basta con copiar y pegar cada una de las líneas anteriores para confirmar que todas realmente retornan true).</p>
-    
-    <p>Por lo tanto, tu tarea de hoy es reescribir el código a continuación para que imprima la información de manera correcta, que tenga sentido y sin errores:</p>
-    
-    <div class="code-box">
-        let numeroUn = 1<br>
-        let stringUn = '1'<br>
-        let numeroTreinta = 30<br>
-        let stringTreinta = '30'<br>
-        let numeroDiez = 10<br>
-        let stringDiez = '10'<br><br>
+    <header>
+        <h1>Día 2</h1>
+    </header>
+    <main>
+        <p>¿Sabes cuando te registras en un site y, justo después, al iniciar sesión, te llama por tu nombre? Eso es lo que harás en el desafío de hoy.</p>
+        
+        <p>Cuando creas un sistema, site o aplicación, es común querer agregar algunos toques personalizados para hacer la experiencia en tu aplicación más rica y dinámica.</p>
 
-        if (COMPARAR numeroUn y stringUn) {<br>
-            &nbsp;&nbsp;console.log('Las variables numeroUn y stringUn tienen el mismo valor, pero tipos diferentes')<br>
-        } else {<br>
-            &nbsp;&nbsp;console.log('Las variables numeroUn y stringUn no tienen el mismo valor')<br>
-        }<br><br>
+        <p>Hacer esto mediante programación puede no ser una tarea fácil. Dependiendo del nivel de personalización que quieras implementar, la cantidad de código que necesitarás escribir puede ser inmensa.</p>
 
-        if (COMPARAR numeroTreinta y stringTreinta) {<br>
-            &nbsp;&nbsp;console.log('Las variables numeroTreinta y stringTreinta tienen el mismo valor y el mismo tipo')<br>
-        } else {<br>
-            &nbsp;&nbsp;console.log('Las variables numeroTreinta y stringTreinta no tienen el mismo tipo')<br>
-        }<br><br>
+        <p>Pero, por supuesto, puedes comenzar de una manera más sencilla. Para ello, lo importante es entender cómo capturar y almacenar valores dentro de variables. ¡Y en eso te voy a ayudar hoy!</p>
 
-        if (COMPARAR numeroDiez y stringDiez) {<br>
-            &nbsp;&nbsp;console.log('Las variables numeroDiez y stringDiez tienen el mismo valor, pero tipos diferentes')<br>
-        } else {<br>
-            &nbsp;&nbsp;console.log('Las variables numeroDiez y stringDiez no tienen el mismo valor')<br>
-        }
-    </div>
+        <p>Las variables son los bloques básicos de construcción de cualquier sistema y son esenciales para procesar cualquier tipo de información, ya sea de una persona que ha iniciado sesión en el sistema o incluso para mostrar detalles de productos en un catálogo de comercio electrónico.</p>
 
-    <button onclick="completeDay(1)">Completar Día 1</button>
+        <p>Por eso, hoy te voy a enseñar a desarrollar un programa simulando una de esas aplicaciones. Debe pedir al usuario responder 3 preguntas:</p>
+
+        <ul>
+            <li>¿Cuál es tu nombre?</li>
+            <li>¿Cuántos años tienes?</li>
+            <li>¿Qué lenguaje de programación estás estudiando?</li>
+        </ul>
+
+        <p>A medida que se hagan las preguntas, la persona que esté usando el programa debe responder cada una de ellas.</p>
+
+        <p>Al final, el sistema mostrará el mensaje:</p>
+
+        <pre><code>"Hola [nombre], tienes [edad] años y ya estás aprendiendo [lenguaje]!"</code></pre>
+
+        <p>Observa que cada información entre [ ] es una de las respuestas dadas por la persona.</p>
+
+        <h2>Ejercicio Opcional</h2>
+
+        <p>Si deseas profundizar en el tema de hoy, tengo otro ejercicio para ti.</p>
+
+        <p>Pero es 100% opcional.</p>
+
+        <p>Vas a complementar el código para que, después de mostrar el mensaje anterior, el programa pregunte:</p>
+
+        <pre><code>¿Te gusta estudiar [lenguaje]? Responde con el número 1 para SÍ o 2 para NO.</code></pre>
+
+        <p>Y luego, dependiendo de la respuesta, debería mostrar uno de los siguientes mensajes:</p>
+
+        <ul>
+            <li>1 &gt; ¡Muy bien! Sigue estudiando y tendrás mucho éxito.</li>
+            <li>2 &gt; Oh, qué pena... ¿Ya intentaste aprender otros lenguajes?</li>
+        </ul>
+
+        <h2>Consejo</h2>
+
+        <p>Puedes agregar tantas preguntas como desees y aprovechar las respuestas de los usuarios en el mensaje que se mostrará.</p>
+
+        <p>Para imprimir y recibir valores, puedes usar tanto <code>console.log</code>, <code>prompt</code> y <code>alert</code>, como también HTML y CSS si ya tienes conocimiento en estas dos tecnologías.</p>
+
+        <p>Puedes usar la estructura condicional <code>if</code> para resolver el Ejercicio Opcional. Algo como:</p>
+
+        <pre><code>if (respuesta == 1) {
+    // da la respuesta positiva
+}
+
+if (respuesta == 2) {
+    // da la respuesta negativa
+}</code></pre>
+
+        <h2>Extra</h2>
+
+        <p>Tanto <code>alert()</code> como <code>prompt()</code> se utilizan para crear cuadros de diálogo e interactuar con el usuario, pero son diferentes entre sí.</p>
+
+        <p>El <code>alert()</code> se utiliza para mostrar un mensaje simple al usuario.</p>
+
+        <p>Ejemplo:</p>
+
+        <pre><code>alert("¡Hola, todos!");</code></pre>
+
+        <p>El <code>prompt()</code> requiere que el usuario ingrese algún valor, que podrás manipular.</p>
+
+        <p>Ejemplo:</p>
+
+        <pre><code>const ciudad = prompt("Escribe tu ciudad:");
+const msg = `¡Eres de ${ciudad}!`;
+alert(msg);</code></pre>
+
+        <p>Prueba los códigos anteriores e intenta adaptarlos a tu programa.</p>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
